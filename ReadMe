@@ -1,0 +1,48 @@
+百度地图：
+     1.添加依赖
+     2.在清单文件中添加权限和密钥
+     3.添加百度地图控件
+     4.
+     5.在代码中初始化百度地图SDK。在自定义的Application类中
+
+第一步：获得key	根据API进行获取。开发期间，可以将debug的keystore置于项目路径下（本地的keyStore），便于统一使用。在Model_level中添加：
+   signingConfigs {
+        // your debug keystore
+        debug {
+            storeFile file("debug.keystore")
+        }
+    }
+
+   命令：  keytool -list -keystore debug.keystore
+
+   在百度地图开放平台上创建应用。此处应用类型选Android SDK，填入数字签名和应用包名。创建后即可获取AK(app key)
+第二步：添加百度地图的依赖包。将所用到的百度地图包放在app/libs文件夹下。在build.gradle文件中添加：
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+      }
+--------------------------------
+HTTP请求的知识点：
+      目标：了解消息的结构：请求和响应是什么结构，消息是什么样的？
+      1.path:路径
+      2.request method:请求方式
+      3.request Headers:请求头
+      4.request Body:请求体
+  响应：
+      1.Request code:
+      2.Request header:
+      3.Request body:
+
+  OkHttp:
+      1.使用流程
+      2.Call模型
+      3.重点：拦截器功能，需要添加依赖 LoggingIntercepter:拦截请求和响应的数据
+      4.在callBack中不能刷新UI
+
+
+
+
+    ------------------------------------
+普通视图，卫星视图，空白视图
+

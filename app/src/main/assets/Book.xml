@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <book>
+      <name>计算机组成原理</name>
+	  <type>计算机</type>
+	  <id>1</id>
+  </book>
+    <book>
+      <name>java基础语言</name>
+	  <type>计算机</type>
+	  <id>2</id>
+  </book>
+    <book>
+      <name>大学英语</name>
+	  <type>英语</type>
+	  <id>3</id>
+  </book>
+</books>

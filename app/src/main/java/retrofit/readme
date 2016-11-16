@@ -1,0 +1,57 @@
+----------------------------------------------------------11.09
+ Retrofit：今天的重点内容：要求：一定要掌握
+   基于Okhttp 进行的封装的，CallBack是可以更新UI的
+   重大的改变：使用注解来帮我们构建接口请求
+
+掌握主要流程
+转换器：Retrofit的功能
+可以使用OkHttp
+
+   1. 注解
+   2. baseUrl
+   3. Call<泛型>模型： 泛型到底是啥？应该填入什么？最后得到的数据类型
+
+         网络请求：Json字符串：解析：类，集合；方式：json,Gson...
+                   xml：解析：类，集合；方式：SAX,DOM,PULL...
+                   html：一般直接在WebView中展示出来
+                   最终解析出来：类，集合，最终得到数据类型
+
+           Retrofit强大的功能：转换器
+                 Json字符串--------> 实体类  集合 ；通过Gson转换器
+                 1.添加依赖
+                 2.构建Retrofit时，添加转换器
+                 3.在Call模型里面添加上转换到的类或者集合
+
+     4.重点讲解内容：
+       1.baseUrl:在接口构建的时候，传入的接口地址不是完整的Url地址，会将BaseUrl进行拼接
+                  如果是完整的，不进行拼接
+       2.url中的可替换块处理
+       3.表单数据提交：name=....;age=...;      ----->   @FormUrlEncoded ,@Field("name")String name,@Field("age")int age
+       4.多部分上传：   ----> @Multipart  @Part("xxx")ResponseBody responseBody
+
+
+ --------------------------------------------------------11.10
+ 今日内容：
+      上午：SAX解析
+      下午： 完成地图的展示、定位、指南、地图状态、地图的缩放
+ ---------------------------------------------------------11.11
+ 今日内容：
+      上午：Dom解析 、Pull解析
+     详情：Dom
+         1.拿到DocumentBuilderFactory实例
+         2.通过fanctory拿到newDocumentBuilder实例
+         3.将输入流转换成文档：parse（inputString）
+         4.读取文档的元素:getDocumentElement
+         5.获取元素中的节点:getElementsByTagName
+         6.遍历节点，得到单个节点：item（int）
+         7.拿到该节点的子节点列表，getChildNodes();
+         8.遍历子节点列表，得到一个子节点item(int)
+         9.。。。。。。。
+         10.将该子节点对象加入到模型对象。
+     详情：PULL解析
+         1.
+
+      下午：
+
+
+

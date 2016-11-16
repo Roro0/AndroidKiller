@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--百度地图开始-->
+<!--    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>-->
+
+    <Button
+        android:id="@+id/btn_switch_state"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卫星地图"/>
+    <Button
+        android:id="@+id/btn_local"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="定位"/>
+    <Button
+        android:id="@+id/btn_compass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="指南"/>
+    <!--百度地图结束-->
+
+</RelativeLayout>
